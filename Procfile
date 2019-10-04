@@ -1,0 +1,1 @@
+web: gunicorn englishrandomwords.wsgi --log-file -
