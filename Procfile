@@ -1,1 +1,1 @@
-web: gunicorn englishrandomwords.wsgi --log-file -
+web: gunicorn mouse.wsgi --log-file -
