@@ -25,7 +25,7 @@ SECRET_KEY = '%1m1$cnyny_hhbk-q9_5u5b43wbebknz%bv_4v=i%in1$yf$5@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mousesite.herokuapp.com']
+ALLOWED_HOSTS = ['mousesite.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'mousesite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['mousesite/templates'],
+        'DIRS': ['mouse/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
