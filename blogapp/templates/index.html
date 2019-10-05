@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Metro CSS -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-colors.min.css">
+  
+  <title>Random Words!</title>
+</head>
+  <body class="bg-dark">
+
+    <!-- Body -->
+      <div class="container">
+        <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
+
+            <!-- Word.Show() -->
+            <div>
+              <p class="fg-light text-medium display3" id='kek1'> Do or make?</p>
+            </div>
+            <div>
+              <p class="fg-light text-medium display3" id='kek'> Here will be your word</p>
+            </div>
+
+            <!-- Button.getWord() -->
+            <div class="d-flex flex-column flex-align-center flex-start">
+              <button type="button" class="button bg-light gf-dark rounded large" id="wordBox" onClick="getWord(this.id);">Click me to get a word</button>
+              <p class="h6 fg-light">@ck1999 | @Azazel.h</p>
+            </div>
+
+        </div>
+      </div>
+
+
+    <!-- JS[Words] -->
+      <script type="text/javascript">
+          function getWord (id) {
+          var words = ['activity', 'damage', 'favour', 'job', 'task', 'business', 'drawing', 'gardening', 'laundry',
+              'test', 'cleaning', 'duty', 'harm', 'one’s', 'best', 'washing(up)', 'cooking', 'exam(ination)',
+              'homework', 'painting', 'work', 'course', 'exercise', 'ironing', 'shopping', 'apology', 'coffee', 'excuse',
+              'love', 'offer', 'remark', 'assumption', 'comment', 'friends', 'lunch', 'phone', 'call', 'sound', 'bed',
+              'complaint', 'guess', 'mess', 'plan', 'soup', 'breakfast', 'dinner', 'law', 'mistake', 'profit', 'speech',
+              'cake', 'effort', 'list', 'money', 'progress', 'statement', 'change', 'error', 'loss', 'noise', 'promise',
+              'tea'];
+          var lol = Math.floor(Math.random()*words.length);
+          document.getElementById(id='kek').innerHTML = words[lol];
+          words.splice(lol, 1);
+          }
+      </script>
+  </body>
+  <style>
+
+    html {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 576px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      html {
+        font-size: 20px;
+      }
+    }
+    
+  </style>
+</html>
