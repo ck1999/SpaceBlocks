@@ -1,1 +1,1 @@
-web: gunicorn mousesite.wsgi --log-file -
+web: gunicorn mousesites.wsgi --log-file -
