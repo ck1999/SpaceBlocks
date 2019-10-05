@@ -1,1 +1,1 @@
-web: gunicorn mouse.wsgi --log-file -
+web: gunicorn talkhub.wsgi --log-file -
