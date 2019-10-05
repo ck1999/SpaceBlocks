@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import mousesites
+import mousesite
 from django.http import HttpResponse
 
 
