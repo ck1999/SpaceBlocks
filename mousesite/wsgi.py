@@ -1,5 +1,5 @@
 """
-WSGI config for talkhub project.
+WSGI config for mousesite project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

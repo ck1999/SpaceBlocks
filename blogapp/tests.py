@@ -93,11 +93,11 @@
 # 
 #     def test_signup_fire(self):
 #         """test 12"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('id_title').send_keys("test title")
 #         self.driver.find_element_by_id('id_body').send_keys("test body")
 #         self.driver.find_element_by_id('submit').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def tearDown(self):
 #         """test 13"""
@@ -139,33 +139,33 @@
 # 
 #     def delete_post_test(self):
 #         """test 19"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('delete').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def edit_post_test(self):
 #         """test 20"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('edit-post').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def like_post_test(self):
 #         """test 21"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('like').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def delete_comment_test(self):
 #         """test 22"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('delete-comment').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def send_comment_test(self):
 #         """test 23"""
-#         self.driver.get("https://talkhub.herokuapp.com/")
+#         self.driver.get("https://mousesite.herokuapp.com/")
 #         self.driver.find_element_by_id('send-comment').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 # 
 # class ProfilePageTests(SimpleTestCase):
@@ -173,15 +173,15 @@
 # 
 #     def edit_profile_test(self):
 #         """test 24"""
-#         self.driver.get("https://talkhub.herokuapp.com/profile")
+#         self.driver.get("https://mousesite.herokuapp.com/profile")
 #         self.driver.find_element_by_id('edit-profile').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def delete_profile_test(self):
 #         """test 25"""
-#         self.driver.get("https://talkhub.herokuapp.com/profile")
+#         self.driver.get("https://mousesite.herokuapp.com/profile")
 #         self.driver.find_element_by_id('delete-user').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 # 
 # class PostEditPageTests(SimpleTestCase):
@@ -212,9 +212,9 @@
 # 
 #     def PasswordDonePageTest(self):
 #         """test 29"""
-#         self.driver.get("https://talkhub.herokuapp.com/reset-password-done")
+#         self.driver.get("https://mousesite.herokuapp.com/reset-password-done")
 #         self.driver.find_element_by_id('log-in').click()
-#         self.assertIn("https://talkhub.herokuapp.com/", self.driver.current_url)
+#         self.assertIn("https://mousesite.herokuapp.com/", self.driver.current_url)
 # 
 #     def CheckLoginTest(self):
 #         """test 30"""

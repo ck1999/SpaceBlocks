@@ -1,9 +1,9 @@
-# [TalkHub](https://talkhub.herokuapp.com)
+# [mousesite](https://mousesite.herokuapp.com)
 ---
 
-TalkHub is a unique portal were programmers can solve their problems using video chat
+mousesite is a unique portal were programmers can solve their problems using video chat
 
-Main features of the TalkHub:
+Main features of the mousesite:
 
 * Video chat in every post
 * Authentification with Yandex, Github, Google, Facebook, Vkontakte
@@ -41,10 +41,10 @@ Main features of the TalkHub:
 * Experienced programmers now have the ability to share knowledge in real-life discussions
 ---
 
-You can find used libraries in [requirements.txt](https://github.com/vbelovitsky/talkhub/blob/master/requirements.txt)
+You can find used libraries in [requirements.txt](https://github.com/vbelovitsky/mousesite/blob/master/requirements.txt)
 
 Currently deployed on [Heroku](https://dashboard.heroku.com)
 
-[Waiting you on TalkHub!](https://talkhub.herokuapp.com)
+[Waiting you on mousesite!](https://mousesite.herokuapp.com)
 
 Version 1.0
