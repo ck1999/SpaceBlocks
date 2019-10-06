@@ -8,7 +8,7 @@
         <div class="container">
           <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
 
-            <form method="post">
+            <form method="post" action="{% url 'add_block' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <input type="submit" value="Submit">

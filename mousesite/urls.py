@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('blocks', views.blocks),
-    path('add', views.add_block)
+    path('add', views.add_block, name="add_block")
 ]
