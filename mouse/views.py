@@ -27,5 +27,5 @@ def add_block(request):
 
 def block_list(request):
     blocks = Block.objects()
-    blocks.append(BlockHash(000000000000000, 0, datetime.datetime.now(), "MasterBlock"))
+    blocks.append(Block(000000000000000, 0, datetime.datetime.now(), "MasterBlock"))
     return render(request, 'blocks.html', {'blocks': block_list})
