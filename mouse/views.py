@@ -22,8 +22,7 @@ def add_block(request):
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
             item.save()
 
-    context = {'form': form,
-               'block': block}
+    context = {'block': block}
 
     return render(request, 'add.html', context)
 
