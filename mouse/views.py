@@ -9,4 +9,4 @@ def index(request):
 
 def blocks(request):
     """list of blocks"""
-    return render(request, 'blocks.html', context)
+    return render(request, 'blocks.html')
