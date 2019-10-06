@@ -20,6 +20,6 @@ from mouse import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('blocks', views.blocks)
+    path('blocks', views.blocks),
     path('add', views.add_block)
 ]
