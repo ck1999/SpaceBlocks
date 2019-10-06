@@ -13,10 +13,10 @@ def blocks(request):
     return render(request, 'blocks.html')
 
 def add_block(request):
-    if request.method == 'POST':
+    """ if request.method == 'POST':
         form = PostCreateForm(request.POST)
         if form.is_valid():
             AddBlock = form.save(commit=False)
-            AddBlock.msg = '123'
+            AddBlock.msg = '123' """
     return render(request, 'add.html')
 
