@@ -5,9 +5,9 @@ from .models import Block
 
 class AddBlock(forms.ModelForm):
 
-    msg = forms.CharField(label='', widget=forms.TextInput(
+    msg = forms.CharField(label='',required=False, widget=forms.TextInput(
         attrs={'placeholder': 'Hash', 'data-role':"input"}))
-    nonce = forms.CharField(label='', widget=forms.TextInput(
+    nonce = forms.CharField(label='',required=False, widget=forms.TextInput(
         attrs={'placeholder': 'Nonce', 'data-role':"input"}))
 
     class Meta:
