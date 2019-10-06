@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+  {% include "head.html" %}
+
+  <body class="bg-dark">
+
+      <!-- Body -->
+        <div class="container">
+          <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
+
+            {% for block in blocks %}
+                <div></div>
+            {% endfor %}
+
+        </div>
+  </body>
+  <style>
+
+      html {
+        font-size: 12px;
+      }
+
+      @media screen and (min-width: 576px) {
+        html {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        html {
+          font-size: 16px;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        html {
+          font-size: 20px;
+        }
+      }
+      
+  </style>
+</html>

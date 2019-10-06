@@ -25,3 +25,6 @@ def add_block(request):
     
     return render(request, 'add.html', {'form': f})
 
+def block_list(request):
+    blocks = Block.objects()
+    return render(request, 'blocks.html', {'blocks': block_list})

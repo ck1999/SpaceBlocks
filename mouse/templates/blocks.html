@@ -7,30 +7,25 @@
       <!-- Body -->
         <div class="container">
           <div class="d-flex flex-row flex-align-start" style="height: 100vh;">
-
-              <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
-                  <div class="border bd-light">
-                    <p>Id</p>
-                  </div>
-                  <div class="border bd-light">
-                    <p>0</p>
-                  </div>
-              </div>
               <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
                   <div class="border bd-light">
                     <p>Hash</p>
                   </div>
+                  {% for block in blocks %}
                   <div class="border bd-light">
-                    <p>000000000000000</p>
-                  </div>
+                      <p>{{ block.hash }}</p>
+                    </div>
+                  {% endfor %}
               </div>
               <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
                   <div class="border bd-light">
                     <p style="color: #eee8aa;">Nonce</p>
                   </div>
+                  {% for block in blocks %}
                   <div class="border bd-light">
-                    <p style="color: #eee8aa;">0</p>
-                  </div>
+                      <p style="color: #eee8aa;">{{ block.nonce }}</p>
+                    </div>
+                  {% endfor %}
               </div>
 
         </div>
