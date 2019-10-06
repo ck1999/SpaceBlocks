@@ -10,7 +10,7 @@ def index(request):
 # Create your views here.
 
 def blocks(request):
-    
+
     return render(request, 'blocks.html')
 
 def add_block(request):
@@ -25,7 +25,9 @@ def add_block(request):
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
             item.save()
 
-    context = {}
+    context = {
+        'block': item
+    }
 
     return render(request, 'add.html', context)
 
