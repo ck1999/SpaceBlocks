@@ -17,5 +17,5 @@ class Block(models.Model):
     def get_date(self):
         return self.date
 
-    def get_msg(seld):
+    def get_msg(self):
         return self.msg
