@@ -12,8 +12,6 @@ def blocks(request):
 
 def add_block(request):
 
-    context = {'menu:': get_menu_context(request)}
-
     if request.method == 'POST':
         form = AddBlock(request.POST)
         if form.is_valid():
@@ -23,6 +21,9 @@ def add_block(request):
 
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
             item.save()
-    
+
+    context = {'form': form,
+               'block': block}
+
     return render(request, 'add.html', context)
 
