@@ -6,12 +6,11 @@ from .models import Block
 class AddBlock(forms.ModelForm):
 
     msg = forms.CharField(label='', widget=forms.TextInput(
-        attrs={'placeholder': 'Hash'}))
+        attrs={'placeholder': 'Hash', 'data-role':"input"}))
     nonce = forms.CharField(label='', widget=forms.TextInput(
-        attrs={'placeholder': 'Nonce'}))
+        attrs={'placeholder': 'Nonce', 'data-role':"input"}))
 
     class Meta:
-        """meta class"""
         model = Block
         fields = (
             'msg',
