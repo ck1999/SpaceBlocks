@@ -10,7 +10,7 @@ def index(request):
 # Create your views here.
 
 def blocks(request):
-    """list of blocks"""
+    
     return render(request, 'blocks.html')
 
 def add_block(request):
