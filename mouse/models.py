@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import hashlib
 
 # Create your models here.
 class Block(models.Model):
@@ -19,3 +20,11 @@ class Block(models.Model):
 
     def get_msg(self):
         return self.msg
+
+    def calc_hash(self, prev_hash):
+        result = prev_hash + self.text + self.nonce
+        result = result.encode()
+        return hashlib.sha256(result).hexdigest()
+    
+    def get_dict(self):
+        return dict(text=self.text, nonce=self.nonce, hash=self.hash, time=self.time)

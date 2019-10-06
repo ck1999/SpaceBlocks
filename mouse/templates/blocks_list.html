@@ -8,11 +8,9 @@
         <div class="container">
           <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
 
-            <form method="post" action="{% url 'add_block' %}">
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Submit" class="w-100 button drop-shadow light">
-            </form>
+            {% for block in blocks %}
+                <div></div>
+            {% endfor %}
 
         </div>
   </body>

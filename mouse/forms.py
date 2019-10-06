@@ -5,10 +5,10 @@ from .models import Block
 
 class AddBlock(forms.ModelForm):
 
-    msg = forms.CharField(label='', widget=forms.TextInput(
-        attrs={'placeholder': 'Hash', 'data-role':"input"}))
-    nonce = forms.CharField(label='', widget=forms.TextInput(
-        attrs={'placeholder': 'Nonce', 'data-role':"input"}))
+    msg = forms.CharField(label='',required=False, widget=forms.TextInput(
+        attrs={'placeholder': 'Message', 'data-role':"input"}))
+    nonce = forms.CharField(label='',required=False, widget=forms.TextInput(
+        attrs={'placeholder': 'Nonce', 'data-role':"input", 'class': 'mt-2 mb-2'}))
 
     class Meta:
         model = Block
