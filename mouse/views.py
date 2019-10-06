@@ -14,16 +14,14 @@ def blocks(request):
     return render(request, 'blocks.html')
 
 def add_block(request):
-
+    f = AddBlock(request.POST)
     if request.method == 'POST':
-        form = AddBlock(request.POST)
-        if form.is_valid():
-
-            nonce_a = form.data['nonce']
-            msg_a = form.data['msg']
+        if f.is_valid():
+            nonce_a = f.data['nonce']
+            msg_a = f.data['msg']
 
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
             item.save()
     
-    return render(request, 'add.html', {'form': form})
+    return render(request, 'add.html', {'form': f})
 
