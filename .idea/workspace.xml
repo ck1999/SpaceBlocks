@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="238d86c6-1bc0-43df-96ad-4e878d602e3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mouse/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/mouse/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mouse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mouse/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mouse/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="182">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -112,10 +112,10 @@
       <list>
         <option value="$PROJECT_DIR$/mousesite/urls.py" />
         <option value="$PROJECT_DIR$/mouse/templates/index.html" />
-        <option value="$PROJECT_DIR$/mouse/views.py" />
         <option value="$PROJECT_DIR$/mouse/models.py" />
         <option value="$PROJECT_DIR$/mousesite/settings.py" />
         <option value="$PROJECT_DIR$/mouse/templates/add.html" />
+        <option value="$PROJECT_DIR$/mouse/views.py" />
       </list>
     </option>
   </component>
@@ -221,7 +221,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1182000" />
+    <option name="totallyTimeSpent" value="1272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="687" extended-state="6" />
@@ -318,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mouse/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state relative-caret-position="182">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

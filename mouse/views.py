@@ -3,6 +3,7 @@ import mousesite
 from django.http import HttpResponse
 from mouse.forms import AddBlock
 from mouse.models import Block
+import datetime
 
 def index(request):
     return render(request, 'index.html')
