@@ -11,10 +11,18 @@ def blocks(request):
     return render(request, 'blocks.html')
 
 def add_block(request):
-    """ if request.method == 'POST':
-        form = PostCreateForm(request.POST)
+
+    context = {'menu:': get_menu_context(request)}
+
+    if request.method == 'POST':
+        form = AddBlock(request.POST)
         if form.is_valid():
-            AddBlock = form.save(commit=False)
-            AddBlock.msg = '123' """
-    return render(request, 'add.html')
+
+            nonce_a = form.data['nonce']
+            msg_a = form.data['msg']
+
+            item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
+            item.save()
+    
+    return render(request, 'add.html', context)
 
