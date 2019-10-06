@@ -11,6 +11,9 @@
             <form method="post" action="{% url 'add_block' %}">
                 {% csrf_token %}
                 {{ form}}
+                {% if not form %}
+                то ты дебил
+                {% endif %}
                 <input type="submit" value="Submit">
             </form>
 
