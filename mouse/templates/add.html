@@ -10,8 +10,8 @@
 
             <form method="post" action="{% url 'add_block' %}">
                 {% csrf_token %}
-                {{ form}}
-                <input type="submit" value="Submit">
+                {{ form }}
+                <input type="submit" value="Submit" class="w-100 button drop-shadow light">
             </form>
 
         </div>
