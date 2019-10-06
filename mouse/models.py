@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Block(models.Model):
-    hash =  models.CharField(max_length=15)
-    nonce = models.IntegerField()
-    date = models.DateTimeField()
-    msg = models.CharField(max_length=3)
+    hash =  models.CharField(max_length=15, blank=True)
+    nonce = models.IntegerField(blank=True)
+    date = models.DateTimeField(blank=True)
+    msg = models.CharField(max_length=3, blank=True)
 
     def get_hash(self):
         return self.hash
