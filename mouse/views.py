@@ -24,6 +24,13 @@ def add_block(request):
 
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
             item.save()
+<<<<<<< HEAD
     
     return render(request, 'add.html', {'form': form})
+=======
+
+    context = {}
+
+    return render(request, 'add.html', context)
+>>>>>>> parent of 674460f... Update views.py
 
