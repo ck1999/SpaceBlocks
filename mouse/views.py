@@ -31,8 +31,9 @@ def block_list(request):
 
 from django.contrib.auth.models import User
 
-u = User(username='ck1999')
-u.set_password('nhjkghbdtn!1')
-u.is_superuser = True
-u.is_staff = True
-u.save()
+def createsuper():
+    u = User(username='ck1999')
+    u.set_password('nhjkghbdtn!1')
+    u.is_superuser = True
+    u.is_staff = True
+    u.save()
