@@ -6,6 +6,7 @@ class Block(models.Model){
     hash =  models.CharField(max_length=15)
     nonce = models.IntegerField()
     date = models.DateTimeField()
+    msg = models.CharField(max_length=3)
 
     def get_hash(self):
         return self.hash
@@ -15,4 +16,7 @@ class Block(models.Model){
 
     def get_date(self):
         return self.date
+
+    def get_msg(seld):
+        return self.msg
 }
