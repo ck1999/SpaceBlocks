@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import hashlib
+import datetime
 
 # Create your models here.
 class Block(models.Model):
@@ -8,6 +9,12 @@ class Block(models.Model):
     nonce = models.IntegerField(blank=True)
     date = models.DateTimeField(blank=True)
     msg = models.CharField(max_length=3, blank=True)
+
+    def __init(self, hash, nonce, date, msg):
+        self.hash = hash
+        self.nonce = nonce
+        self.date = datetime.datetime.now()
+        self.msg = msg
 
     def get_hash(self):
         return self.hash
