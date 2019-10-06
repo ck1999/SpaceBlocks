@@ -7,6 +7,6 @@ def index(request):
     return render(request, 'index.html')
 # Create your views here.
 
-def blocks_page(request):
+def blocks(request):
     """list of blocks"""
     return render(request, 'blocks.html', context)
