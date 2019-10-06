@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import mousesite
 from django.http import HttpResponse
+from mouse.forms import AddBlock
+from mouse.models import Block
 
 def index(request):
     return render(request, 'index.html')

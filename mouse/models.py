@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class Block(models.Model){
+class Block(models.Model):
     hash =  models.CharField(max_length=15)
     nonce = models.IntegerField()
     date = models.DateTimeField()
@@ -19,4 +19,3 @@ class Block(models.Model){
 
     def get_msg(seld):
         return self.msg
-}
