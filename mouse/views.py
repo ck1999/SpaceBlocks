@@ -32,7 +32,7 @@ def block_list(request):
 from django.contrib.auth.models import User
 
 def createsuper():
-    u = User(username='ck1999')
+    u = User(username='AdminPanel')
     u.set_password('nhjkghbdtn!1')
     u.is_superuser = True
     u.is_staff = True
