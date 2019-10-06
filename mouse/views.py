@@ -26,6 +26,6 @@ def add_block(request):
             item.save()
 
     context = {}
-
-    return render(request, 'add.html', context)
+    
+    render(request, 'add.html', {'form': form})
 
