@@ -18,4 +18,5 @@ def add_block(request):
         if form.is_valid():
             AddBlock = form.save(commit=False)
             AddBlock.msg = '123'
-    return render(request, 'blocks.html')
+    return render(request, 'add.html')
+
