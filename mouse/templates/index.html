@@ -1,51 +1,40 @@
 <!DOCTYPE html>
-{% load static %}
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Metro CSS -->
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+  {% include "head.html" %}
 
-  <!-- Metro JS -->
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-
-  <title>MbIШb</title>
-</head>
   <body class="bg-dark">
 
-    <!-- Body -->
-      <div class="container">
-        <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
+      <!-- Body -->
+        <div class="container">
+          <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
 
-            <div data-role="cube" data-color="bg-light bd-gray" data-flash-color="#eee8aa"></div>
+              <div data-role="cube" data-color="bg-light bd-gray" data-flash-color="#eee8aa"></div>
 
-      </div>
+        </div>
   </body>
   <style>
 
-    html {
-      font-size: 12px;
-    }
-
-    @media screen and (min-width: 576px) {
       html {
-        font-size: 14px;
+        font-size: 12px;
       }
-    }
 
-    @media screen and (min-width: 768px) {
-      html {
-        font-size: 16px;
+      @media screen and (min-width: 576px) {
+        html {
+          font-size: 14px;
+        }
       }
-    }
 
-    @media screen and (min-width: 992px) {
-      html {
-        font-size: 20px;
+      @media screen and (min-width: 768px) {
+        html {
+          font-size: 16px;
+        }
       }
-    }
-    
+
+      @media screen and (min-width: 992px) {
+        html {
+          font-size: 20px;
+        }
+      }
+      
   </style>
 </html>
