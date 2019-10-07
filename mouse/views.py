@@ -20,8 +20,8 @@ def add_block(request):
         if f.is_valid():
             nonce_a = f.data['nonce']
             msg_a = f.data['msg']
-
-            item = Block(hash = calc_hash(Block.objects.latest('id').hash), nonce = int(nonce_a), time = datetime.datetime.now(), msg=msg_a)
+            item = Block(nonce = int(nonce_a), time = datetime.datetime.now(), msg=msg_a)
+            item.hash = item.calc_hash(Block.objects.get(id = (Block.objects.latest('id') - 1)))
             item.save() 
     
     return render(request, 'add.html', {'form': f})
