@@ -5,9 +5,9 @@ import datetime
 
 # Create your models here.
 class Block(models.Model):
-    hash =  models.CharField(max_length=15, blank=True)
+    hash =  models.TextField(max_length=15, blank=True)
     nonce = models.IntegerField(blank=True)
-    msg = models.CharField(max_length=3, blank=True)
+    msg = models.TextField(max_length=3, blank=True)
     time = models.DateTimeField(blank=True)
 
     def __init(self, hash, nonce, date, msg):
