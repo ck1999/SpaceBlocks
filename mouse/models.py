@@ -7,8 +7,8 @@ import datetime
 class Block(models.Model):
     hash =  models.CharField(max_length=15, blank=True)
     nonce = models.IntegerField(blank=True)
-    date = models.DateTimeField(blank=True)
     msg = models.CharField(max_length=3, blank=True)
+    time = models.DateTimeField(blank=True)
 
     def __init(self, hash, nonce, date, msg):
         self.hash = hash

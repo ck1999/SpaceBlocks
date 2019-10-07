@@ -17,16 +17,15 @@ def add_block(request):
     f = AddBlock(request.POST)
     if request.method == 'POST':
         if f.is_valid():
-            item = f.save()
             nonce_a = f.data['nonce']
             msg_a = f.data['msg']
 
             item = Block(hash = '0', nonce = nonce_a, date = datetime.datetime.now(), msg=msg_a)
-            item.save() 
+            item.save(commit=False) 
     
     return render(request, 'add.html', {'form': f})
 
 def block_list(request):
     blocks = Block.objects()
-    blocks.append(Block('000000000000000', 0, datetime.datetime.now(), "MasterBlock"))
-    return render(request, 'blocks.html', {'blocks': block_list})
+    blocks.append(Block('000000000000000', 0,  'MasterBlock', datetime.datetime.now(),))
+    return render(request, 'blocks.html', {'blocks': blocks})
