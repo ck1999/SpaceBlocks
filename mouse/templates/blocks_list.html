@@ -5,14 +5,11 @@
   <body class="bg-dark">
 
       <!-- Body -->
-        <div class="container">
-          <div class="d-flex flex-column flex-justify-around flex-align-center" style="height: 100vh;">
-
+        <ul>
             {% for block in blocks %}
-                <div></div>
+                <li>{{ block.name }}</li>
             {% endfor %}
-
-        </div>
+        </ul>
   </body>
   <style>
 
