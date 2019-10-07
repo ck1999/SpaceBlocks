@@ -14,7 +14,7 @@ class Block(models.Model):
         self.hash = str(hash)
         self.nonce = nonce
         self.date = datetime.datetime.now()
-        self.msg = msg
+        self.msg = str(msg)
 
     def get_hash(self):
         return self.hash
