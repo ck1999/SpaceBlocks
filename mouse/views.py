@@ -10,8 +10,9 @@ def index(request):
 # Create your views here.
 
 def blocks(request):
-
-    return render(request, 'blocks.html')
+    blocks = Block.objects.all()
+    context = {'blocks': blocks}
+    return render(request, 'blocks.html', context)
 
 def add_block(request):
     f = AddBlock(request.POST)
@@ -24,8 +25,3 @@ def add_block(request):
             item.save() 
     
     return render(request, 'add.html', {'form': f})
-
-def block_list(request):
-    blocks = Block.objects.all()
-    context = {'blocks': blocks}
-    return render(request, 'blocks.html', context)
