@@ -21,7 +21,7 @@ def add_block(request):
             msg_a = f.data['msg']
 
             item = Block(hash = '0', nonce = int(nonce_a), time = datetime.datetime.now(), msg=msg_a)
-            item.save(commit=False) 
+            item.save() 
     
     return render(request, 'add.html', {'form': f})
 
