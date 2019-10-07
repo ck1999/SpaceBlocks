@@ -25,6 +25,4 @@ def add_block(request):
             item.hash = item.calc_hash(Block.objects.get(id = latest_id).hash)
         if item.validate():
             item.save()
-        else:
-            item.delete()
     return render(request, 'add.html', {'form': f})  
