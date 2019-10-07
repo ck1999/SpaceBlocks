@@ -22,9 +22,8 @@ def add_block(request):
             msg_a = f.data['msg']
             latest_id = Block.objects.latest('id').id
             item = Block(nonce = int(nonce_a), time = datetime.datetime.now(), msg=msg_a)
-            h = item.calc_hash(Block.objects.get(id = latest_id).hash)
-                if h.startswith('0' * 4):
-                    item.hash = h
+            item.hash = item.calc_hash(Block.objects.get(id = latest_id).hash)
+                if item.hash.startswith('0000'):
                     item.save()
                     return render(request, 'add.html', {'form': f})
                 else:
