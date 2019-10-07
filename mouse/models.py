@@ -24,5 +24,5 @@ class Block(models.Model):
     def get_dict(self):
         return dict(text=self.msg, nonce=self.nonce, hash=self.hash, time=self.time)
 
-    def validate(self,h):
-        return h.startswith('0' * 4)
+    def validate(self):
+        return self.hash.startswith('0000')
