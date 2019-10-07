@@ -29,7 +29,7 @@ class Block(models.Model):
         return self.msg
 
     def calc_hash(self, prev_hash):
-        result = prev_hash + self.msg + self.nonce
+        result = str(prev_hash) + self.msg + self.nonce
         result = result.encode()
         return hashlib.sha256(result).hexdigest()
     
