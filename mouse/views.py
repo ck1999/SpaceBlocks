@@ -17,6 +17,7 @@ def add_block(request):
     f = AddBlock(request.POST)
     if request.method == 'POST':
         if f.is_valid():
+            item = f.save()
             nonce_a = f.data['nonce']
             msg_a = f.data['msg']
 
