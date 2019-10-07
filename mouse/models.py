@@ -11,10 +11,10 @@ class Block(models.Model):
     time = models.DateTimeField(blank=True, auto_now_add=True)
 
     def __init(self, hash, nonce, date, msg):
-        self.hash = str(hash)
+        self.hash = hash
         self.nonce = nonce
         self.date = datetime.datetime.now()
-        self.msg = str(msg)
+        self.msg = msg
 
     def get_hash(self):
         return self.hash
@@ -29,7 +29,7 @@ class Block(models.Model):
         return self.msg
 
     def calc_hash(self, prev_hash):
-        result = str(prev_hash) + self.msg + self.nonce
+        result = prev_hash + self.msg + str(self.nonce)
         result = result.encode()
         return hashlib.sha256(result).hexdigest()
     
