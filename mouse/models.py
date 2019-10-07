@@ -16,18 +16,6 @@ class Block(models.Model):
         self.date = datetime.datetime.now()
         self.msg = msg
 
-    def get_hash(self):
-        return self.hash
-
-    def get_nonce(self):
-        return self.nonce
-
-    def get_date(self):
-        return self.date
-
-    def get_msg(self):
-        return self.msg
-
     def calc_hash(self, prev_hash):
         result = prev_hash + self.msg + str(self.nonce)
         result = result.encode()
@@ -35,3 +23,6 @@ class Block(models.Model):
     
     def get_dict(self):
         return dict(text=self.msg, nonce=self.nonce, hash=self.hash, time=self.time)
+
+    def validate(self,h):
+        return h.startswith('0' * 4)
