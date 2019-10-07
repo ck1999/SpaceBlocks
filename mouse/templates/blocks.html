@@ -21,7 +21,7 @@
                   <div class="border bd-light">
                     <p>Message</p>
                   </div>
-                  {% for block in blocks %}
+                  {% for block in blocks reversed%}
                   <div class="border bd-light">
                       <p>{{ block.msg }}</p>
                     </div>
@@ -31,7 +31,7 @@
                   <div class="border bd-light">
                     <p style="color: #eee8aa;">Nonce</p>
                   </div>
-                  {% for block in blocks %}
+                  {% for block in blocks reversed%}
                   <div class="border bd-light">
                       <p style="color: #eee8aa;">{{ block.nonce }}</p>
                     </div>
