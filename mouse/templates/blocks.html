@@ -19,6 +19,16 @@
               </div>
               <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
                   <div class="border bd-light">
+                    <p>Message</p>
+                  </div>
+                  {% for block in blocks %}
+                  <div class="border bd-light">
+                      <p>{{ block.msg }}</p>
+                    </div>
+                  {% endfor %}
+              </div>
+              <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
+                  <div class="border bd-light">
                     <p style="color: #eee8aa;">Nonce</p>
                   </div>
                   {% for block in blocks %}
