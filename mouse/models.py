@@ -11,7 +11,7 @@ class Block(models.Model):
     time = models.DateTimeField(blank=True, auto_now_add=True)
 
     def __init(self, hash, nonce, date, msg):
-        self.hash = hash
+        self.hash = str(hash)
         self.nonce = nonce
         self.date = datetime.datetime.now()
         self.msg = msg
