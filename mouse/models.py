@@ -29,9 +29,9 @@ class Block(models.Model):
         return self.msg
 
     def calc_hash(self, prev_hash):
-        result = prev_hash + self.text + self.nonce
+        result = prev_hash + self.msg + self.nonce
         result = result.encode()
         return hashlib.sha256(result).hexdigest()
     
     def get_dict(self):
-        return dict(text=self.text, nonce=self.nonce, hash=self.hash, time=self.time)
+        return dict(text=self.msg, nonce=self.nonce, hash=self.hash, time=self.time)
