@@ -27,4 +27,5 @@ def add_block(request):
 
 def block_list(request):
     blocks = Block.objects.all()
-    return render(request, 'blocks.html', {'blocks': blocks})
+    context = {'blocks': blocks}
+    return render(request, 'blocks.html', context)
