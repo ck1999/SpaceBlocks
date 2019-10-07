@@ -26,6 +26,6 @@ def add_block(request):
     return render(request, 'add.html', {'form': f})
 
 def block_list(request):
-    blocks = Block.objects()
+    blocks = Block.objects.all()
     blocks.append(Block('000000000000000', 0,  'MasterBlock', datetime.datetime.now(),))
     return render(request, 'blocks.html', {'blocks': blocks})
