@@ -5,7 +5,7 @@ import datetime
 
 # Create your models here.
 class Block(models.Model):
-    hash =  models.TextField(max_length=15, blank=True)
+    hash =  models.TextField(blank=True)
     nonce = models.IntegerField(blank=True)
     msg = models.TextField(max_length=20, blank=True)
     time = models.DateTimeField(blank=True, auto_now_add=True)
@@ -25,4 +25,4 @@ class Block(models.Model):
         return dict(text=self.msg, nonce=self.nonce, hash=self.hash, time=self.time)
 
     def validate(self):
-        return self.hash.startswith('0000')
+        return self.hash.startswith('00000000')
