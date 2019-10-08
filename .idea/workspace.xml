@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/mousesite/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#225#234#0" expanded="true" />
               </folding>
@@ -61,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/mousesite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
               </folding>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/psycopg2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="358">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -254,18 +254,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8029000" />
+    <option name="totallyTimeSpent" value="8077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28776434" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28776434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49471298" visible="true" weight="0.32808024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49471298" visible="true" weight="0.32808024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,8 +416,8 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/psycopg2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="358">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
@@ -459,7 +459,7 @@
     <entry file="file://$PROJECT_DIR$/mousesite/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#225#234#0" expanded="true" />
           </folding>
@@ -469,7 +469,7 @@
     <entry file="file://$PROJECT_DIR$/mousesite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
           </folding>
