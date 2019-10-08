@@ -5,15 +5,19 @@
   <body class="bg-dark">
 
       <!-- Body -->
-        <div class="container">
-          <div class="d-flex flex-row flex-align-start" style="height: 100vh;">
+
+      <div class="container">
+
 
             {% if blocks.count != 0 %}
 
+              <div class="d-flex flex-row flex-align-start" style="height: 100vh;">
                 {% include "blocks_table.html" %}
+              </div>
 
             {% else %}
 
+            <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center" style="height: 100vh;">
               <div class="icon-box border bd-default">
                   <div class="icon bg-red fg-white"><span class="mif-cog"></span></div>
                   <div class="content p-4">
@@ -21,9 +25,10 @@
                       <div class="text-upper text-bold text-lead">Something go wrong...</div>
                   </div>
               </div>
+            </div>
 
             {% endif %}
-        </div>
+      </div>
   </body>
   <style>
 
