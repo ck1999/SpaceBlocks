@@ -7,14 +7,14 @@
       <!-- Body -->
         <div class="container">
           <div class="d-flex flex-row flex-align-start" style="height: 100vh;">
-          
+
             {% if blocks.count != 0 %}
 
                 {% include "blocks_table.html" %}
 
             {% else %}
 
-            <div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
+            <div class="d-flex flex-column flex-justify-around flex-align-center">
                 <div class="bg-red fg-light">
                     <p>Something go wrong...</p>
                 </div>
