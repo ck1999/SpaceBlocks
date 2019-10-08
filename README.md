@@ -1,3 +1,3 @@
-<h1>English Random Words<h1>
+<h1>BLOCKCHAIN<h1>
 
-Best app for learning english words
+Best app for MINING BLOCKS
