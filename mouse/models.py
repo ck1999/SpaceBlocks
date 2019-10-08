@@ -25,4 +25,4 @@ class Block(models.Model):
         return dict(text=self.msg, nonce=self.nonce, hash=self.hash, time=self.time)
 
     def validate(self):
-        return self.hash.startswith('00000000')
+        return self.hash.startswith('000000')
