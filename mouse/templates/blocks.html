@@ -14,11 +14,13 @@
 
             {% else %}
 
-            <div class="d-flex flex-column flex-justify-around flex-align-center">
-                <div class="bg-red fg-light">
-                    <p>Something go wrong...</p>
-                </div>
-            </div>
+              <div class="icon-box border bd-default">
+                  <div class="icon bg-red fg-white"><span class="mif-cog"></span></div>
+                  <div class="content p-4">
+                      <div class="text-upper">Error!</div>
+                      <div class="text-upper text-bold text-lead">Something go wrong...</div>
+                  </div>
+              </div>
 
             {% endif %}
         </div>
