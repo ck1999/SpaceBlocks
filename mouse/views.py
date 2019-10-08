@@ -11,9 +11,6 @@ def index(request):
 
 def blocks(request):
     blocks = Block.objects.all()
-    if blocks.count == 0:
-        item = Block(nonce = int(0), time = datetime.datetime.now(), msg="MouseCrypto", hash="000000000000000")
-        item.save()
     context = {'blocks': blocks}
     return render(request, 'blocks.html', context)
 
