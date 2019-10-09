@@ -13,7 +13,7 @@
         {% for block in blocks reversed%}
             <tr>
                 <td  class="bd-dark secondary bg-grayMouse"> {{ block.id }}</td>
-                <td class="bd-dark secondary bg-grayMouse"> {{ block.hash }} </td>
+                <td class="bd-dark secondary bg-grayMouse"> <div class="hash"> {{ block.hash }} </div> </td>
                 <td class="bd-dark secondary fg-white"> {{ block.nonce}} </td>
                 <td class="bd-dark secondary bg-grayMouse"> {{ block.msg }} </td>
                 <td class="bd-dark secondary bg-grayMouse"> {{ block.time }} </td>
