@@ -2,11 +2,11 @@
 <table class="table compact table-border cell-border striped fg-dark">
     <thead>
         <tr>
-            <th class="bd-dark">#</th>
-            <th class="bd-dark">Hash</th>
-            <th class="bd-dark" style="color: #eee8aa">Nonce</th>
-            <th class="bd-dark">Message</th>
-            <th class="bd-dark">Date</th>
+            <th>#</th>
+            <th>Hash</th>
+            <th style="color: #eee8aa" class="bd-dark bg-red fg-white">Nonce</th>
+            <th>Message</th>
+            <th>Date</th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
             <tr>
                 <td  class="bd-dark">1</td>
                 <td class="bd-dark"> {{ block.hash }} </td>
-                <td class="bd-dark" style="color: #eee8aa"> {{ block.nonce}} </td>
+                <td class="bd-dark bg-red fg-white"> {{ block.nonce}} </td>
                 <td class="bd-dark"> {{ block.msg }} </td>
                 <td class="bd-dark"> {{ block.time }} </td>
             </tr>
