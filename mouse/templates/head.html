@@ -17,6 +17,11 @@
 <ul class="h-menu bg-dark fg-light border-visible-none" style="box-shadow: none;">
     <li><a href="/" class="display3">Home</a></li>
     <li><a href="/blocks" class="display3">Blocks</a></li>
-    <li><a href="/add" class="display3">Add</a></li>
-    <li><a href="" class="display3">Profile</a></li>
+    {% if user.is_authenticated %}
+        <li><a href="/add" class="display3">Add</a></li>
+        <li><a href="/accounts/profile" class="display3">Profile</a></li>
+        <li><a href="/accounts/logout" class="display3">LogOut</a></li>
+    {% else %}
+        <li><a href="/accounts/login" class="display3">Login</a></li>
+    {% endif %}
 </ul>
