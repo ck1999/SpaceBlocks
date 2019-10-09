@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'mousesite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mousesite',
-        'USER': 'name',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd326tej2hd74cb',
+        'USER': 'tmrmceytmtzrff',
+        'PASSWORD': 'f5f7e7efe33d7844072326e11b5930fc0e1e97838f02fbfdf186ec1ec35e100a',
+        'HOST': 'ec2-54-217-234-157.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

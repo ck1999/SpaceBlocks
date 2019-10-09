@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import mousesite
 from django.http import HttpResponse
-from mouse.forms import AddBlock
+from mouse.forms import AddBlock, SignUpForm
 from mouse.models import Block
 import datetime
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'index.html')
@@ -14,6 +16,7 @@ def blocks(request):
     context = {'blocks': blocks}
     return render(request, 'blocks.html', context)
 
+@login_required
 def add_block(request):
     f = AddBlock(request.POST)
     if request.method == 'POST':
@@ -25,4 +28,25 @@ def add_block(request):
             item.hash = item.calc_hash(Block.objects.get(id = latest_id).hash)
             if item.validate():
                 item.save()
-    return render(request, 'add.html', {'form': f})  
+    return render(request, 'add.html', {'form': f})
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('/')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/signup.html', {'form': form})
+
+@login_required
+def account(request):
+    context = {
+        'user': request.user,
+    }
+    return render(request, 'registration/profile.html', context)
