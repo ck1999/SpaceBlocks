@@ -27,5 +27,5 @@ urlpatterns = [
     path('accounts/signup', views.signup, name='reg'),
     path('accounts/profile/', views.account, name='profile'),
     path('accounts/login', auth_views.LoginView.as_view(template_name='registration/login.html', redirect_field_name='/blocks'), name='profile'),
-    path('accounts/logout', auth_views.LogoutView.as_view(template_name='registration/login.html'), name='logout'),
+    path('accounts/logout', auth_views.LogoutView.as_view(next_page='/accounts/login'), name='logout'),
 ]
