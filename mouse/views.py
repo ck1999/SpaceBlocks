@@ -16,7 +16,7 @@ def blocks(request):
     context = {'blocks': blocks}
     return render(request, 'blocks.html', context)
 
-@login_required
+
 def add_block(request):
     f = AddBlock(request.POST)
     if request.method == 'POST':
