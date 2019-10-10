@@ -12,11 +12,11 @@
     <tbody>
         {% for block in blocks reversed%}
             <tr>
-                <td class="bd-grayMouse bg-lightGrayBlue fg-white"> {{ block.id }}</td>
-                <td class="bd-grayMouse secondary fg-white"> <div class="hash"> {{ block.hash }} </div> </td>
+                <td class="bd-grayMouse secondary fg-white"> {{ block.id }}</td>
+                <td class="bd-grayMouse bg-lightGrayBlue fg-white"> <div class="hash"> {{ block.hash }} </div> </td>
                 <td class="bd-grayMouse bg-darkCyan fg-white"> {{ block.nonce}} </td>
-                <td class="bd-grayMouse secondary fg-white"> {{ block.msg }} </td>
-                <td class="bd-grayMouse secondary fg-white"> {{ block.time }} </td>
+                <td class="bd-grayMouse bg-lightGrayBlue fg-white"> {{ block.msg }} </td>
+                <td class="bd-grayMouse bg-lightGrayBlue fg-white"> {{ block.time }} </td>
             </tr>
         {% endfor %}
     </tbody>
