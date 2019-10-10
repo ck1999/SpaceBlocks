@@ -20,8 +20,9 @@
     {% if user.is_authenticated %}
         <li><a href="/add" class="display3">Add</a></li>
         <li><a href="/accounts/profile" class="display3">Profile</a></li>
-        <li><a href="/accounts/logout" class="display3">LogOut</a></li>
+        <li><a href="/accounts/logout" class="display3">Log Out</a></li>
     {% else %}
         <li><a href="/accounts/login" class="display3">Login</a></li>
+        <li><a href="/accounts/signup" class="display3">Sign Up</a></li>
     {% endif %}
 </ul>
