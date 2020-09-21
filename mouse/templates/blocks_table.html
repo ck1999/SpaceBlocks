@@ -1,26 +1,24 @@
-<div class="d-flex flex-column flex-justify-center w-100 fg-light text-center">
-<table class="table compact striped fg-dark cell-border">
-    <thead>
-        <tr>
-            <th class="fg-light bg-grayMouse">#</th>
-            <th class="fg-light bg-grayMouse">Hash</th>
-            <th class="fg-light bg-grayMouse">Nonce</th>
-            <th class="fg-light bg-grayMouse">Message</th>
-            <th class="fg-light bg-grayMouse">Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for block in blocks reversed%}
+<div class="mt-4">
+    <table class="table" data-role="table" data-show-search="false" >
+        <thead>
             <tr>
-                <td class="bd-grayMouse secondary fg-white"> {{ block.id }}</td>
-                <td class="bd-grayMouse secondary fg-white"> <div class="hash"> {{ block.hash }} </div> </td>
-                <td class="bd-grayMouse bg-darkCyan fg-white"> {{ block.nonce}} </td>
-                <td class="bd-grayMouse secondary fg-white"> {{ block.msg }} </td>
-                <td class="bd-grayMouse secondary fg-white"> {{ block.time }} </td>
+                <th class="bg-dark fg-light" data-sortable="true" data-format="int">#</th>
+                <th class="bg-dark fg-light">Hash</th>
+                <th class="bg-dark fg-light">Nonce</th>
+                <th class="bg-dark fg-light">Message</th>
+                <th class="bg-dark fg-light ">Date</th>
             </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {% for block in blocks reversed%}
+                <tr>
+                    <td class="fg-white"> {{ block.id }}</td>
+                    <td class="fg-white"> {{ block.hash }}</td>
+                    <td class="fg-white"> {{ block.nonce}} </td>
+                    <td class="fg-white"> {{ block.msg }} </td>
+                    <td class="fg-white"> {{ block.time }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-
-
