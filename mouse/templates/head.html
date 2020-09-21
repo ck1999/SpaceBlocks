@@ -21,7 +21,12 @@
        data-shift=".shifted-content">
     <ul class="sidebar-menu">
       {% if user.is_authenticated %}
+        {% if user.is_staff %}
         <li><a><span class="mif-verified icon"></span>Logged in</a></li>
+        <li><a href="/admin"><span class="mif-security icon"></span>Admin panel</a></li>
+        {% else %}
+        <li><a><span class="mif-verified icon"></span>Logged in</a></li>
+        {% endif %}
         <li><a href="/"><span class="mif-compass icon"></span>Home</a></li>
         <li><a href="/blocks"><span class="mif-database icon"></span>Blocks</a></li>
         <li><a href="/add"><span class="mif-plus icon"></span>Add block</a></li>
