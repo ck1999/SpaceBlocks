@@ -14,15 +14,32 @@
   </head>
 
 <!-- Menu -->
-<ul class="h-menu bg-dark fg-light border-visible-none" style="box-shadow: none;">
-    <li><a href="/" class="display3">Home</a></li>
-    <li><a href="/blocks" class="display3">Blocks</a></li>
-    {% if user.is_authenticated %}
-        <li><a href="/add" class="display3">Add</a></li>
-        <li><a href="/accounts/profile" class="display3">Profile</a></li>
-        <li><a href="/accounts/logout" class="display3">Log Out</a></li>
-    {% else %}
-        <li><a href="/accounts/login" class="display3">Login</a></li>
-        <li><a href="/accounts/signup" class="display3">Sign Up</a></li>
-    {% endif %}
-</ul>
+<aside class="sidebar pos-absolute z-2"
+       data-role="sidebar"
+       data-toggle="#sidebar-toggle-3"
+       id="sb3"
+       data-shift=".shifted-content">
+    <ul class="sidebar-menu">
+      {% if user.is_authenticated %}
+        <li><a><span class="mif-verified icon"></span>Logged in</a></li>
+        <li><a href="/"><span class="mif-compass icon"></span>Home</a></li>
+        <li><a href="/blocks"><span class="mif-database icon"></span>Blocks</a></li>
+        <li><a href="/add"><span class="mif-plus icon"></span>Add block</a></li>
+        <li class="divider"></li>
+        <li><a href="/accounts/logout"><span class="mif-exit icon"></span>Log Out</a></li>
+      {% else %}
+        <li><a href="/"><span class="mif-compass icon"></span>Home</a></li>
+        <li><a><span class="mif-database icon"></span>Blocks</a></li>
+        <li class="divider"></li>
+        <li><a href="/accounts/logout"><span class="mif-user-check icon"></span>Login</a></li>
+        <li><a href="/accounts/signup"><span class="mif-user-plus icon"></span>Sign up</a></li>
+      {% endif %}
+    </ul>
+</aside>
+<div class="shifted-content h-100 p-ab">
+    <div class="app-bar pos-absolute bg-dark z-1" data-role="appbar">
+        <button class="app-bar-item c-pointer" id="sidebar-toggle-3">
+            <span class="mif-menu fg-white"></span>
+        </button>
+    </div>
+</div>
