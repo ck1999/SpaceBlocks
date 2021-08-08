@@ -1,20 +1,24 @@
-from django.shortcuts import render, redirect
-import mousesite
-from django.http import HttpResponse
-from mouse.forms import AddBlock, SignUpForm
-from mouse.models import Block
 import datetime
+
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+
+from mouse.forms import AddBlock, SignUpForm
+from mouse.models import Block as BlockModel
+
 
 def index(request):
     return render(request, 'index.html')
+
+
 # Create your views here.
 
 def blocks(request):
-    blocks = Block.objects.all()
+    blocks = BlockModel.objects.all()
     context = {'blocks': blocks}
     return render(request, 'blocks.html', context)
+
 
 @login_required
 def add_block(request):
@@ -23,12 +27,13 @@ def add_block(request):
         if f.is_valid():
             nonce_a = f.data['nonce']
             msg_a = f.data['msg']
-            latest_id = Block.objects.latest('id').id
-            item = Block(nonce = int(nonce_a), time = datetime.datetime.now(), msg=msg_a)
-            item.hash = item.calc_hash(Block.objects.get(id = latest_id).hash)
+            latest_id = BlockModel.objects.latest('id').id
+            item = BlockModel(nonce=int(nonce_a), time=datetime.datetime.now(), msg=msg_a)
+            item.hash = item.calc_hash(BlockModel.objects.get(id=latest_id).hash)
             if item.validate():
                 item.save()
     return render(request, 'add.html', {'form': f})
+
 
 def signup(request):
     if request.method == 'POST':
@@ -43,6 +48,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
+
 
 @login_required
 def account(request):
