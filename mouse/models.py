@@ -1,21 +1,13 @@
+import hashlib
+
 from django.db import models
 
-import hashlib
-import datetime
 
-
-# Create your models here.
 class Block(models.Model):
     hash = models.TextField(blank=True)
     nonce = models.IntegerField(blank=True)
     msg = models.TextField(max_length=20, blank=True)
     time = models.DateTimeField(blank=True, auto_now_add=True)
-
-    def __init__(self, hash, nonce, date, msg):
-        self.hash = hash
-        self.nonce = nonce
-        self.date = datetime.datetime.now()
-        self.msg = msg
 
     def calc_hash(self, prev_hash):
         result = prev_hash + self.msg + str(self.nonce)
