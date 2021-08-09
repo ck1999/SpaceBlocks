@@ -15,17 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
 from django.urls import include, path
 from mouse import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('blocks', views.blocks, name='list_of_blocks'),
-    path('add', views.add_block, name="add_block"),
+    path('', views.IndexView.as_view()),
+    path('blocks', views.Blocks.ListView.as_view(), name='list_of_blocks'),
+    path('add', login_required(views.Blocks.AddView.as_view()), name="add_block"),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/signup', views.signup, name='reg'),
-    path('accounts/profile/', views.account, name='profile'),
+    path('accounts/signup', views.SignupView.as_view(), name='reg'),
+    path('accounts/profile/', login_required(views.ProfileView.as_view()), name='profile'),
     path('accounts/login', auth_views.LoginView.as_view(template_name='registration/login.html', redirect_field_name='/blocks'), name='profile'),
     path('accounts/logout', auth_views.LogoutView.as_view(next_page='/accounts/login'), name='logout'),
 ]

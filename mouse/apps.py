@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class mousesiteConfig(AppConfig):
-    name = 'mousesite'
+class MouseConfig(AppConfig):
+    name = 'mouse'
