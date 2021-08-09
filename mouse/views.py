@@ -12,8 +12,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-# Create your views here.
-
 def blocks(request):
     blocks = BlockModel.objects.all()
     context = {'blocks': blocks}
