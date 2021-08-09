@@ -1,5 +1,8 @@
 <h1>BLOCKCHAIN</h1>
+<p><a href="https://github.com/PickBas/SpaceBlocks/actions/workflows/tests.yml"><img src="https://github.com/PickBas/SpaceBlocks/actions/workflows/tests.yml/badge.svg" alt="Test-CI"></a></p>
 This is just fun site with Blockchain blocks on django. No more
+
+
 
 <h1>How to install?</h1>
 <p>1. Download from GitHub our project</p>
