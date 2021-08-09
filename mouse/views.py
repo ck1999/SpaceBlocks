@@ -19,33 +19,41 @@ class IndexView(View):
     def get(self, request: HttpRequest) -> render:
         return render(request, self.template_name)
 
+class Blocks:
+    class ListView(View):
 
-class BlockView(View):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+            self.template_name = 'blocks.html'
 
-        self.template_name_list = 'blocks.html'
-        self.template_name_add_block = 'add.html'
-        self.context = {}
+        def get(self, request: HttpRequest) -> render:
+            blocks = BlockModel.objects.all()
+            context = {'blocks': blocks}
 
-    def get(self, request: HttpRequest) -> render:
-        blocks = BlockModel.objects.all()
-        self.context = {'blocks': blocks}
+            return render(request, self.template_name, context)
 
-        return render(request, self.template_name_list, self.context)
+    class AddView(View):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
 
-    def post(self, request: HttpRequest) -> render:
-        form = AddBlock(request.POST)
-        if form.is_valid():
-            nonce_a = form.data['nonce']
-            msg_a = form.data['msg']
-            latest_id = BlockModel.objects.latest('id').id
-            item = BlockModel(nonce=int(nonce_a), time=datetime.datetime.now(), msg=msg_a)
-            item.hash = item.calc_hash(BlockModel.objects.get(id=latest_id).hash)
-            if item.validate():
-                item.save()
-        return render(request, self.template_name_add_block, {'form': form})
+            self.template_name = 'add.html'
+
+        def get(self, request: HttpRequest) -> render:
+            form = AddBlock()
+            return render(request, self.template_name, {'form': form})
+
+        def post(self, request: HttpRequest) -> render:
+            form = AddBlock(request.POST)
+            if form.is_valid():
+                nonce_a = form.data['nonce']
+                msg_a = form.data['msg']
+                latest_id = BlockModel.objects.latest('id').id
+                item = BlockModel(nonce=int(nonce_a), time=datetime.datetime.now(), msg=msg_a)
+                item.hash = item.calc_hash(BlockModel.objects.get(id=latest_id).hash)
+                if item.validate():
+                    item.save()
+            return render(request, self.template_name, {'form': form})
 
 
 class SignupView(View):

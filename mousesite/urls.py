@@ -22,8 +22,8 @@ from mouse import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.IndexView.as_view()),
-    path('blocks', views.BlockView.as_view(), name='list_of_blocks'),
-    path('add', login_required(views.BlockView.as_view()), name="add_block"),
+    path('blocks', views.Blocks.ListView.as_view(), name='list_of_blocks'),
+    path('add', login_required(views.Blocks.AddView.as_view()), name="add_block"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup', views.SignupView.as_view(), name='reg'),
     path('accounts/profile/', login_required(views.ProfileView.as_view()), name='profile'),

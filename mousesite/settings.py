@@ -79,24 +79,17 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-       'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd326tej2hd74cb',
+        'USER': 'tmrmceytmtzrff',
+        'PASSWORD': 'f5f7e7efe33d7844072326e11b5930fc0e1e97838f02fbfdf186ec1ec35e100a',
+        'HOST': 'ec2-54-217-234-157.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'd326tej2hd74cb',
-            'USER': 'tmrmceytmtzrff',
-            'PASSWORD': 'f5f7e7efe33d7844072326e11b5930fc0e1e97838f02fbfdf186ec1ec35e100a',
-            'HOST': 'ec2-54-217-234-157.eu-west-1.compute.amazonaws.com',
-            'PORT': '5432',
-        }
-    }
+}
 
 
 # Password validation
