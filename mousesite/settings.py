@@ -137,7 +137,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-django_heroku.settings(locals())
+if os.environ.get('TEST') != 'true':
+    django_heroku.settings(locals())
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
